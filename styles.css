@@ -1,8 +1,10 @@
+
 /* Set the font family for the entire body */
 body {
     font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, rgb(241, 209, 209), rgb(236, 234, 196));
   }
-  
+
   /* Styling for the form container */
   .form-container {
     max-width: 600px;
@@ -10,6 +12,7 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #fff;
   }
   
   /* Center-align the heading and add margin at the bottom */
@@ -54,12 +57,14 @@ body {
   
   /* Styling for the submit button */
   .form-group input[type="submit"] {
-    background-color: #4caf50;
+    background-color: green;
     color: white;
     padding: 10px 15px;
-    border: none;
+    border: rgb(198, 213, 213);
     border-radius: 4px;
     cursor: pointer;
+    text-align: center;
+    margin-left: 45%;
   }
   
   /* Styling for small helper text */
