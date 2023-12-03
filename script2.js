@@ -101,17 +101,19 @@ function validateName() {
   // Function to submit the form
   async function submitForm(event) {
     event.preventDefault();
-  
-    // Validate form inputs before submission
-    if (!validateName() || !validateStudentID() || !validateEmail()) {
-      return;
-    }
-    else {displayFormData();}
 
-    if (!validateName() || !validateStudentID() || !validateEmail()) {
+    if (!validateName()) {
+      alert ("Only enter your first name and last name, middle name is not necessary.");
       return;
-    }
-    else {document.getElementById("myForm").reset();}
+     }
+     else if (!validateStudentID()) {
+       alert ("Please enter a 10-digit Student ID.");
+       return;
+      }
+      else if (!validateEmail()) {
+       alert ("Please provide a valid university email in the format 'xxx.yyy@dome.tu.ac.th'.");
+       return;
+      }
   
     const startDateInput = document.getElementById("startDate").value;
     const endDateInput = document.getElementById("endDate").value;
@@ -122,6 +124,17 @@ function validateName() {
       alert("End datetime should be after the start datetime.");
       return;
     }
+
+    // Validate form inputs before submission
+    if (!validateName() || !validateStudentID() || !validateEmail() ) {
+      return;
+    }
+    else {displayFormData();}
+
+    if (!validateName() || !validateStudentID() || !validateEmail() ) {
+      return;
+    }
+    else {document.getElementById("myForm").reset();}
   
     // Create the data object to send to the backend
     const formData = new FormData(event.target);
@@ -236,7 +249,6 @@ function displayFormData() {
     // Prevent the default form submission
     event.preventDefault();
   
-    
   });
 
   
