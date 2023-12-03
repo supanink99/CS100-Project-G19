@@ -107,6 +107,11 @@ function validateName() {
       return;
     }
     else {displayFormData();}
+
+    if (!validateName() || !validateStudentID() || !validateEmail()) {
+      return;
+    }
+    else {document.getElementById("myForm").reset();}
   
     const startDateInput = document.getElementById("startDate").value;
     const endDateInput = document.getElementById("endDate").value;
@@ -231,9 +236,12 @@ function displayFormData() {
     // Prevent the default form submission
     event.preventDefault();
   
-    // Call a function to display the form data
     
   });
+
+  
+
+  
 
   
   
