@@ -1,3 +1,7 @@
+const config = {
+  backendUrl: "https://d1npkyc4r380kx.cloudfront.net/",
+};
+
 const fullnameInput = document.getElementById("fullname");
 const studentIDInput = document.getElementById("studentID");
 const emailInput = document.getElementById("email");
