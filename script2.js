@@ -1,6 +1,7 @@
 const config = {
-  backendUrl: "https://d1npkyc4r380kx.cloudfront.net/",
+  backendUrl: "http://localhost:8000/", // Default backend URL
 };
+const port = 8000;
 
 const fullnameInput = document.getElementById("fullname");
 const studentIDInput = document.getElementById("studentID");
